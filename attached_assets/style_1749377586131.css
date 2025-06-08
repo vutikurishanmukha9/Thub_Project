@@ -1,0 +1,217 @@
+/* Combined CSS from style.css and page.css */
+
+body {
+  background-color: rgb(253, 252, 252);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 20px -8px rgba(0, 0, 0, 0.7); /* Right and bottom shadow only */
+}
+.navbar-data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar img.logo {
+  margin: 0 auto; /* Center the logo horizontally */
+  display: block; /* Ensure the logo is treated as a block element */
+}
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+}
+
+#logoutButton {
+  margin-left: auto;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Center children horizontally */
+}
+
+.row {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the flex container */
+  width: 100%;
+  margin-bottom: 20px; /* Add margin bottom to create space between rows */
+}
+
+.card input[type="username"],
+.card input[type="password"] {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.card input[type="username"]:focus,
+.card input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+.session,
+.campus,
+.course {
+  margin: 20px;
+  flex: 1; /* Allow elements to grow and take available space */
+}
+
+select {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  padding: 8px;
+  min-width: 150px; /* Adjust width for smaller screens */
+  width: 100%;
+}
+
+select:focus {
+  outline: none;
+  border-color: #004466;
+  box-shadow: 0 0 3px #004466;
+}
+
+select option {
+  background-color: #fff;
+  color: #333;
+}
+
+select option:hover {
+  background-color: #f0f0f0;
+}
+
+select option:focus {
+  background-color: #e0e0e0;
+}
+
+select option:checked {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+select option:disabled {
+  background-color: #ccc;
+  color: #999;
+}
+
+select option:disabled:checked {
+  background-color: #ddd;
+  color: #777;
+}
+
+#showButton {
+  margin-top: 37px;
+}
+
+button {
+  border-radius: 4px;
+  background-color: rgb(0, 68, 102);
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 20px;
+}
+#downloadButton{
+  margin-top: 37px;
+}
+.download {
+  border-radius: 4px;
+  background-color: rgb(0, 68, 102);
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.logo {
+  width: 120px;
+}
+
+/* Additional CSS for data-page */
+#data-page {
+  display: none;
+}
+
+#data-page .container {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: flex-start; /* Align items to the top */
+  margin-top: 20px; /* Add margin */
+}
+
+#data-page .row {
+  margin-bottom: 20px; /* Add margin */
+}
+
+#data-page #data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#data-page #data-table th,
+#data-page #data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+/* Add CSS styles to customize the calendar input field */
+
+#calendarInput {
+  padding: 8px; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border radius */
+  font-size: 16px; /* Adjust font size */
+  width: 150px; /* Adjust width */
+  background-color: #fff; /* Add background color */
+  font-family: Arial, sans-serif;
+}
+
+#calendarInput:focus {
+  outline: none; /* Remove focus outline */
+  border-color: #004466; /* Change border color on focus */
+  box-shadow: 0 0 3px #004466; /* Add box shadow on focus */
+}
+@media screen and (max-width: 600px) {
+  .row {
+      flex-direction: column; /* Change to column layout */
+  }
+}

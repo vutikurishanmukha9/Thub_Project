@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome CDN for eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="login-page">
+        <div class="card">
+            <div class="navbar">
+                <img src="aditya-logo.png" alt="logo" class="logo">
+            </div>
+            <h1>LOGIN</h1>
+            <form id="login-form" action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="username" id="username" name="username" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">SIGN IN</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="data-page" style="display: none;">
+        <div class="navbar-data">
+            <img src="aditya-logo.png" alt="logo" class="logo">
+        </div>
+        <div class="navbar-buttons">
+            <button id="logoutButton" class="button">Logout</button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="session">
+                    <label for="session">Session:</label>
+                    <select id="session" name="session" required>
+                        <option value="" disabled selected hidden>Select Session</option>
+                        <option value="AEC">AN</option>
+                        <option value="ACET">FN</option>
+                    </select>
+                </div>
+                <div class="campus">
+                    <label for="branch">Campus:</label>
+                    <select id="branch" name="branch" required>
+                        <option value="" disabled selected hidden>Select Branch</option>
+                        <option value="AEC">AEC</option>
+                        <option value="ACET">ACET</option>
+                        <option value="ACOE">ACOE</option>
+                    </select>
+                </div>
+                <div class="course">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected hidden>Select Course</option>
+                        <option value="CE">CE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="ME">ME</option>
+                        <option value="ECE">ECE</option>
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="AI&ML">AI&ML</option>
+                        <option value="AE">AE</option>
+                        <option value="PT&Mining">PT&Mining</option>
+                        <option value="IOT">IOT</option>
+                        <option value="CSE-CS">CSE-CS</option>
+                        <option value="CSE-DC">CSE-DC</option>
+                    </select>
+                </div>
+                <button id="showButton" class="button">Show</button>
+                <button id="downloadButton" class="download">Download</button>
+            </div>
+            
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>S No.</th>
+                        <th>Name</th> <!-- Added Name header -->
+                        <th>Roll Number</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table-body">
+                    <!-- Filtered data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
