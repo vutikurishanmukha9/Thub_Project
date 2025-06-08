@@ -6,7 +6,6 @@ from models import User, Student, AttendanceRecord, AttendanceSession
 from utils import generate_excel_report, validate_biometric_data
 import json
 
-@app.before_first_request
 def create_default_data():
     """Create default users and sample data if they don't exist"""
     try:
